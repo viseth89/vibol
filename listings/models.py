@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from staff.models import Staff
 
 # Create your models here.
 class Listing(models.Model):
