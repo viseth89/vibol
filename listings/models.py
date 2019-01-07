@@ -7,7 +7,7 @@ class Listing(models.Model):
     staff = models.ForeignKey(Staff, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=200)
     description = models.TextField()
-    price = models.IntegerField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     qty = models.IntegerField()
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
